@@ -1,0 +1,7 @@
+28.08.2021 13:14:10 mouse konumu değiştirildi: {X=524,Y=486}
+28.08.2021 13:13:46 mouse konumu değiştirildi: {X=377,Y=513}
+28.08.2021 13:13:23 mouse konumu değiştirildi: {X=448,Y=316}
+28.08.2021 13:13:00 mouse konumu değiştirildi: {X=421,Y=1078}
+28.08.2021 13:12:38 mouse konumu değiştirildi: {X=991,Y=764}
+28.08.2021 13:12:16 mouse konumu değiştirildi: {X=-3023,Y=-208}
+28.08.2021 13:11:55 mouse konumu değiştirildi: {X=-3029,Y=-463}
