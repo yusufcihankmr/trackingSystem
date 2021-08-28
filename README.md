@@ -1,4 +1,4 @@
-#trackinSystem
+#trackingSystem
 
 Merhabalar, bu proje ile bilgisayarınıza izinsiz erişenleri tespit edip, webcam ile fotoğrafını çekip, aynı zamanda screenshot alıp ve bunları size mail yolu ile iletip aynı zamanda bilgisayarınızı kilitleyebilirsiniz.
 
