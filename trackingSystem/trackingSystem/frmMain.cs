@@ -27,8 +27,6 @@ namespace trackingSystem
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            this.Hide();
-
             radioButton1.Checked = true;
             radioButton2.Checked = false;
 
