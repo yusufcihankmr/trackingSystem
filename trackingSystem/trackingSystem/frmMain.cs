@@ -139,6 +139,7 @@ namespace trackingSystem
 
                     if (SonKonum != konum)
                     {
+                        SonKonum = konum;
                         AddLog("mouse konumu değiştirildi: " + konum.ToString());
                         listBox1.Items.Insert(0, DateTime.Now + " - mouse konumu değiştirildi: " + konum.ToString());
 
@@ -160,14 +161,12 @@ namespace trackingSystem
                         Screenshot().Save(fileLocation1);
                         SendMail(DateTime.Now + " Cihazınıza istenmeyen erişim tespit edildi. " + konum.ToString(), fileLocation, fileLocation1);
 
-                        Kontrol = true;
-                    }
-
-                    Sayac++;
-                    if (Sayac == 3)
-                    {
-                        Sayac = 0;
-                        LockWorkStation();
+                        Sayac++;
+                        if (Sayac == 3)
+                        {
+                            Sayac = 0;
+                            LockWorkStation();
+                        }
                     }
                 }
             }
