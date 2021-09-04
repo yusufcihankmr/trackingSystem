@@ -193,14 +193,16 @@ namespace trackingSystem
             }
         }
 
-        private void açToolStripMenuItem_Click(object sender, EventArgs e)
+        private void notifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            if (this.WindowState != FormWindowState.Normal)
+                this.WindowState = FormWindowState.Normal;
+
             this.Show();
-            this.WindowState = FormWindowState.Normal;
         }
 
         private int TamamenKapat = 0;
-        private void kapatToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             TamamenKapat = 1;
             Application.Exit();

@@ -37,13 +37,10 @@ namespace trackingSystem
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripTransfer = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripKapat = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // listBox1
@@ -67,6 +64,7 @@ namespace trackingSystem
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(406, 21);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.Visible = false;
             // 
             // pictureBox1
             // 
@@ -100,41 +98,18 @@ namespace trackingSystem
             this.radioButton2.Text = "Kapalı";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // contextMenuStrip
-            // 
-            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripTransfer,
-            this.toolStripKapat});
-            this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(105, 48);
-            this.contextMenuStrip.Text = "tracking system";
-            // 
-            // toolStripTransfer
-            // 
-            this.toolStripTransfer.Name = "toolStripTransfer";
-            this.toolStripTransfer.Size = new System.Drawing.Size(104, 22);
-            this.toolStripTransfer.Text = "Aç";
-            this.toolStripTransfer.Click += new System.EventHandler(this.açToolStripMenuItem_Click);
-            // 
-            // toolStripKapat
-            // 
-            this.toolStripKapat.Name = "toolStripKapat";
-            this.toolStripKapat.Size = new System.Drawing.Size(104, 22);
-            this.toolStripKapat.Text = "Kapat";
-            this.toolStripKapat.Click += new System.EventHandler(this.kapatToolStripMenuItem_Click);
-            // 
             // notifyIcon
             // 
-            this.notifyIcon.ContextMenuStrip = this.contextMenuStrip;
             this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
             this.notifyIcon.Tag = "yk";
             this.notifyIcon.Text = "tracking system";
             this.notifyIcon.Visible = true;
+            this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(346, 408);
+            this.linkLabel1.Location = new System.Drawing.Point(346, 403);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(75, 13);
             this.linkLabel1.TabIndex = 5;
@@ -142,12 +117,25 @@ namespace trackingSystem
             this.linkLabel1.Text = "yusufcihankmr";
             this.linkLabel1.Click += new System.EventHandler(this.linkLabel1_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(265, 398);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Kapat";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(433, 430);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -164,7 +152,6 @@ namespace trackingSystem
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,11 +165,9 @@ namespace trackingSystem
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
-        private System.Windows.Forms.ToolStripMenuItem toolStripTransfer;
-        private System.Windows.Forms.ToolStripMenuItem toolStripKapat;
         private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
